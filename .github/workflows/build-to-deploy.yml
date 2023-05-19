@@ -27,3 +27,10 @@ jobs:
         TARGET: ~/tresh.run/
         SCRIPT_AFTER: |
           echo $RSYNC_STDOUT
+
+
+    - name: Webhook to matrix room
+      uses: joelwmale/webhook-action@master
+      with:
+        url: ${{ secrets.WEBHOOK_URL }}
+        body: '{"username": "Deployment Bot", "text": "En ny deployment er gjort. Sjekk [den](https://tresh.run) ut!"}'
