@@ -16,11 +16,6 @@ jobs:
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: src/.vuepress/dist/
 
-<<<<<<< HEAD
-    - name: List files in the repository
-      run: |
-          ls $BUILD_DIR
-=======
     - name: rsync to tresh.run
       uses: easingthemes/ssh-deploy@main
       env:
@@ -38,4 +33,3 @@ jobs:
           whoami
           ls -al
           echo $RSYNC_STDOUT
->>>>>>> 771a8b3 (updated workflow to rsync)
