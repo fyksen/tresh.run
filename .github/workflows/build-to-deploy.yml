@@ -15,3 +15,7 @@ jobs:
         TARGET_BRANCH: master
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: src/.vuepress/dist/
+
+    - name: List files in the repository
+      run: |
+          ls $BUILD_DIR
