@@ -21,7 +21,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-avzr --delete"
-        SOURCE: $BUILD_DIR/src/
+        SOURCE: $BUILD_DIR/src/.vuepress/dist/
         REMOTE_HOST: caddy.fyksen.me
         REMOTE_USER: tresh
         TARGET: ~/tresh.run/
