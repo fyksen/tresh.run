@@ -1,0 +1,19 @@
+{
+  "name": "tresh.run",
+  "version": "0.0.1",
+  "description": "A collection of thoughs around treshold running",
+  "main": "index.js",
+  "authors": {
+    "name": "Fredrik Fyksen",
+    "email": "fredrik@fyksen.me"
+  },
+  "repository": "https://github.com/fyksen/tresh.run/tresh.run",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
