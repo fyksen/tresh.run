@@ -22,7 +22,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-avzr --delete"
         SOURCE: $BUILD_DIR/src/
-        REMOTE_HOST: tresh.run
+        REMOTE_HOST: caddy.fyksen.me
         REMOTE_USER: tresh
         TARGET: ~/tresh.run/
         SCRIPT_AFTER: |
