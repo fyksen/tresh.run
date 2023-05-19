@@ -21,11 +21,10 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-avzr --delete"
-        SOURCE: "dist/"
+        SOURCE: $BUILD_DIR/src/
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
-        SOURCE: $BUILD_DIR/src/
         SCRIPT_BEFORE: |
           whoami
           ls -al
