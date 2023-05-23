@@ -66,6 +66,7 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    'plausible': { domain: 'tresh.run', 'selfHostedUrl': 'plausible.tresh.run' },
+    '@vuepress/active-header-links',
+    'plausible', { domain: 'https://tresh.run', 'selfHostedUrl': 'https://plausible.tresh.run' },
   ]
 }
