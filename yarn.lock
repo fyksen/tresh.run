@@ -8312,6 +8312,11 @@ vuepress-plugin-container@^2.0.2:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
+vuepress-plugin-plausible@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-plausible/-/vuepress-plugin-plausible-0.0.4.tgz#383aa0b2f9dad3f0546a7a336223af3b5c3d4e9e"
+  integrity sha512-4SV/9dYSxFZKTZrEMl0G1dTH6mYUqjvK6cm/aDoVsJR9rPkRAK3+OZnFQoI7z2j9+R4BGYJxFfDVECNBwUDz3g==
+
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.3.tgz#6eff2d4c186cca917cc9f7df2b0af7de7c8c6438"
