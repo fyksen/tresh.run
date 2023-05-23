@@ -67,6 +67,6 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     '@vuepress/active-header-links',
-    'plausible-analytics', { domain: 'plausible.tresh.run'},
+    'plausible', { domain: 'https://plausible.tresh.run', 'selfHostedUrl': 'https://plausible.tresh.run'},
   ]
 }

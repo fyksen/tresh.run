@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.9.9",
     "vuepress": "^1.5.3",
-    "vuepress-plugin-plausible-analytics": "^0.2.1"
+    "vuepress-plugin-plausible": "^0.0.4"
   },
   "dependencies": {}
 }

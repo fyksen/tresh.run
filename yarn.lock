@@ -8312,10 +8312,10 @@ vuepress-plugin-container@^2.0.2:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-plausible-analytics@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-plausible-analytics/-/vuepress-plugin-plausible-analytics-0.2.1.tgz#d6733b17305bd37d5b9797460c8a8d179b79fc2d"
-  integrity sha512-e4ZLAFEbfhjpHv08+QqO1lMZeDa/kcg71yLtzG1LCre7sfihQyuV82ZFU3yGflqDgimcfv2AkZe24fIdoRqYmg==
+vuepress-plugin-plausible@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-plausible/-/vuepress-plugin-plausible-0.0.4.tgz#383aa0b2f9dad3f0546a7a336223af3b5c3d4e9e"
+  integrity sha512-4SV/9dYSxFZKTZrEMl0G1dTH6mYUqjvK6cm/aDoVsJR9rPkRAK3+OZnFQoI7z2j9+R4BGYJxFfDVECNBwUDz3g==
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
