@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Tresh.Run",
   description: "A wiki about all things treshhold running",
   cleanUrls: true,
+  ignoreDeadLinks: true,
   head: [
     ['script', { defer: true, 'data-domain': 'tresh.run', src: 'https://plausible.tresh.run/js/script.js' }]
   ],
