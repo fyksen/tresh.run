@@ -7,21 +7,24 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: jenkey2011/vuepress-deploy@v1.8.1
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: fyksen/tresh.run-deploy
-        TARGET_BRANCH: master
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: src/.vuepress/dist/
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: npm
+    - run: npm ci
+    - name: Build
+      run: npm run docs:build
+
 
     - name: rsync to tresh.run
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-avzr --delete"
-        SOURCE: $BUILD_DIR/src/.vuepress/dist/
+        SOURCE: docs/.vitepress/dist
         REMOTE_HOST: caddy.fyksen.me
         REMOTE_USER: tresh
         TARGET: ~/tresh.run/
