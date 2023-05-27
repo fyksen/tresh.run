@@ -17,7 +17,7 @@ hero:
 features:
   - title: History
     details: A detailed history about the Norwegian 
-  - title: Explenation
+  - title: Explanation
     details: Why is treshold running so effective?
   - title: Easy to do, hard to perfect
     details: Information about volume, lactate, intensity and nutrtion
