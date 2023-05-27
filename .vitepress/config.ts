@@ -13,22 +13,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Main Topic', link: '/page1' }
+      { text: 'Wiki', link: '/wiki/' }
     ],
 
     sidebar: [
       {
-        text: 'Main Topic',
+        text: 'Wiki',
         items: [
-          { text: 'Main 1', link: '/page1' },
-          { text: 'Main 2', link: '/page2' }
-        ]
-      },
-      {
-        text: 'Second Topic',
-        items: [
-          { text: 'Second 1', link: '/second-page1' },
-          { text: 'Second 2', link: '/second-page2' }
+          { text: 'Introduction', link: '/wiki/' },
+          { text: 'Lactate', link: '/wiki/lactate/' },
+          { text: 'Easy Running', link: '/easy-running' }
         ]
       }
     ],
