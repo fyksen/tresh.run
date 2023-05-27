@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Tresh.Run"
-  text: "All things treshhold running"
+  text: "All things threshold running"
   tagline: Opinionated guide about running.
   actions:
     - theme: brand
