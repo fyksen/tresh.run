@@ -8,11 +8,11 @@ hero:
   tagline: Opinionated guide about running.
   actions:
     - theme: brand
-      text: Main Topic
-      link: /page1
+      text: Wiki
+      link: /wiki
     - theme: alt
-      text: Second Topic
-      link: /second-page1
+      text: Contribute
+      link: https://github.com/fyksen/tresh.run
 
 features:
   - title: History
