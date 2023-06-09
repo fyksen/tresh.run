@@ -10,7 +10,7 @@ import {
 
 const members = [
   {
-    avatar: '/public/photos/tom.png',
+    avatar: '/photos/tom.png',
     name: 'Tom Kuyken',
     title: 'Head chef',
     links: [
@@ -18,7 +18,7 @@ const members = [
     ]
   },
   {
-    avatar: '/public/photos/fredrik.png',
+    avatar: '/photos/fredrik.png',
     name: 'Fredrik Sætereng Fyksen',
     title: 'Sous chef',
     links: [
@@ -26,7 +26,7 @@ const members = [
     ]
   },
   {
-    avatar: '/public/photos/ola.png',
+    avatar: '/photos/ola.png',
     name: 'Ola Matre',
     title: 'Trainee',
     links: [
