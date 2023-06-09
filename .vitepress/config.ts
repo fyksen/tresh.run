@@ -13,7 +13,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Wiki', link: '/wiki/' }
+      { text: 'Wiki', link: '/wiki/' },
+      { text: 'About site', link: '/about-site'}
     ],
 
     sidebar: [
@@ -22,7 +23,7 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/wiki/' },
           { text: 'Lactate', link: '/wiki/lactate/' },
-          { text: 'Easy Running', link: '/easy-running' }
+          { text: 'Easy Running', link: '/wiki/easy-running' }
         ]
       }
     ],

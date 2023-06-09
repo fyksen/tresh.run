@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Wiki
-      link: /wiki
+      link: /wiki/
     - theme: brand
       text: Contribute
       link: https://github.com/fyksen/tresh.run
