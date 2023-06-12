@@ -14,10 +14,13 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Wiki', link: '/wiki/' },
-      { text: 'About site', link: '/about-site'}
+      { text: 'About site', link: '/about-site'},
+      { text: 'Get updates', link: '/subscribe'}
+      
     ],
 
-    sidebar: [
+    sidebar: {
+      '/wiki/': [
       {
         text: 'Wiki',
         items: [
@@ -27,9 +30,8 @@ export default defineConfig({
         ]
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/fyksen/tresh.run' }
     ]
   }
-})
+}})
