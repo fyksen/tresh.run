@@ -72,7 +72,7 @@ export default {
     async subscribe() {
       try {
         const username = 'listmonk';
-        const password = 'pho1ij9bieyuuSh8oone';
+        const password = process.env.LISTMONK_PASSWORD;
 
         const response = await fetch('https://listmonk.tresh.run/api/subscribers', {
           method: 'POST',
@@ -84,7 +84,7 @@ export default {
             email: this.email,
             name: this.name,
             status: 'enabled',
-            lists: [4], // Replace with the actual list ID you want to subscribe to
+            lists: [4],
           }),
         });
 

@@ -4,34 +4,37 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
+      - name: Set up environment variables
+        run: echo "LISTMONK_PASSWORD=${{ secrets.LISTMONK_PASSWORD }}" >> $GITHUB_ENV
 
-    - run: npm ci
-    - name: Build
-      run: npm run docs:build
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
-    - name: rsync to tresh.run
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-avzr --delete"
-        SOURCE: .vitepress/dist/
-        REMOTE_HOST: caddy.fyksen.me
-        REMOTE_USER: tresh
-        TARGET: ~/tresh.run/
-        SCRIPT_AFTER: |
-          echo $RSYNC_STDOUT
+      - run: npm ci
+      - name: Build
+        run: npm run docs:build
 
-    - name: Webhook to matrix room
-      uses: joelwmale/webhook-action@master
-      with:
-        url: ${{ secrets.WEBHOOK_URL }}
-        body: '{"username": "Deployment Bot", "text": "En ny deployment er gjort. Sjekk [den](https://tresh.run) ut!"}'
+      - name: rsync to tresh.run
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-avzr --delete"
+          SOURCE: .vitepress/dist/
+          REMOTE_HOST: caddy.fyksen.me
+          REMOTE_USER: tresh
+          TARGET: ~/tresh.run/
+          SCRIPT_AFTER: |
+            echo $RSYNC_STDOUT
+
+      - name: Webhook to matrix room
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: '{"username": "Deployment Bot", "text": "En ny deployment er gjort. Sjekk [den](https://tresh.run) ut!"}'
