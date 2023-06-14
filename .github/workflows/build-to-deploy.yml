@@ -16,7 +16,7 @@ jobs:
 
       - name: Add content to .env file
         run: |
-          echo "LISTMONK_PASSWORD=${{ secrets.LISTMONK_PASSWORD }}" > .env
+          echo "VITE_LISTMONK_PASSWORD=${{ secrets.LISTMONK_PASSWORD }}" > .env
 
       - name: install the project dependencies
         run: npm ci
