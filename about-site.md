@@ -1,18 +1,12 @@
----
-layout: page
----
 <script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers
-} from 'vitepress/theme'
+import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
     avatar: '/photos/tom.png',
     name: 'Tom Kuyken',
     title: 'Head chef',
+    desc: 'Initiative starter for this project, and has written most of the Wiki. ',
     links: [
       { icon: 'github', link: 'https://www.strava.com/athletes/14168591' },
       { icon: { 
@@ -26,6 +20,7 @@ const members = [
     avatar: '/photos/fredrik.png',
     name: 'Fredrik Sætereng Fyksen',
     title: 'Sous chef',
+    desc: 'Built the tech stack, and contributed to wiki.',
     links: [
       { icon: 'github', link: 'https://www.strava.com/athletes/14168591' },
       { icon: { 
@@ -39,6 +34,8 @@ const members = [
     avatar: '/photos/ola.png',
     name: 'Ola Matre',
     title: 'Trainee',
+    desc: 'Hasn\'t done shit..',
+
     links: [
       { icon: 'github', link: 'https://www.strava.com/athletes/14168591' },
       { icon: { 
@@ -48,20 +45,23 @@ const members = [
     ]
   }
 ]
-
-
 </script>
 
-<VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>
-      Our Team
-    </template>
-    <template #lead>
-      The development of this wiki is guided by an enthusiastic team, some of whom have chosen to be featured below.
-    </template>
-  </VPTeamPageTitle>
-  <VPTeamMembers
-    :members="members"
-  />
-</VPTeamPage>
+# Our Team
+
+ The development of this wiki is guided by an enthusiastic team, some of whom have chosen to be featured below. 
+
+<VPTeamMembers size="small" :members="members" />
+
+## Contribute
+
+::: info
+GitHub is a web-based platform where developers can store, manage, and collaborate on their code and software projects. You need to create a Github account to create issues or send Pull requests.
+:::
+
+* Want to add anything to a topic, or disagree with something written? Add a issue to our [issues page](https://github.com/fyksen/tresh.run/issues)
+The source of this wiki is accessable on Github. This makes it easy for anyone to add a issue.
+
+* Want to add something to the wiki, or change som spelling? Add a [Pull request](https://github.com/fyksen/tresh.run/pulls)!
+
+* Just want to contact us about something? Send an [email](mailto:fredrik@fyksen.me).

@@ -10,16 +10,14 @@ hero:
     - theme: brand
       text: Wiki
       link: /wiki/
-    - theme: brand
-      text: Contribute
-      link: https://github.com/fyksen/tresh.run
+
 
 features:
+  - title: Understanding
+    details: Get detalied understarding about the Norwegian treshold model. 
   - title: History
-    details: A detailed history about the Norwegian 
-  - title: Explanation
-    details: Why is treshold running so effective?
+    details: Understand where this training philosophy comes from.
   - title: Easy to do, hard to perfect
-    details: Information about volume, lactate, intensity and nutrtion
+    details: Information about volume, lactate, intensity and nutrtion.
 ---
 
