@@ -8,17 +8,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up environment variables
-        run: echo "LISTMONK_PASSWORD=${{ secrets.LISTMONK_PASSWORD }}" >> $GITHUB_ENV
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
+      - name: Set up environment variables
+        env:
+          LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
+          VITE_LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
+        run: echo "Environment variables are set"
+
       - run: npm ci
       - name: Build
+        env:
+          LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
         run: npm run docs:build
 
       - name: rsync to tresh.run
@@ -37,4 +42,4 @@ jobs:
         uses: joelwmale/webhook-action@master
         with:
           url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"username": "Deployment Bot", "text": "En ny deployment er gjort. Sjekk [den](https://tresh.run) ut!"}'
+          body: '{"username": "Deployment Bot", "text": "
