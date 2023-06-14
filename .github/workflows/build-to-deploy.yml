@@ -14,13 +14,13 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
-      - name: Set up environment variables
-        env:
-          LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
-          VITE_LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
-        run: echo "Environment variables are set"
+      - name: Add content to .env file
+        run: |
+          echo "LISTMONK_PASSWORD=${{ secrets.LISTMONK_PASSWORD }}" > .env
 
-      - run: npm ci
+      - name: install the project dependencies
+        run: npm ci
+
       - name: Build
         env:
           LISTMONK_PASSWORD: ${{ secrets.LISTMONK_PASSWORD }}
