@@ -13,7 +13,7 @@ First off, thank you for wanting to contribute. If you want to add to this site,
 
 ## Technical stuff, how does this work? 💾
 
-* The site is built on the fantastic wiki project [VuePress](vuepress.vuejs.org/).
+* The site is built on the fantastic wiki project [Vitepress](https://vitepress.dev//).
 * When something new is added to this repository, our site gets updated automagically 🧙
 
 ## How to build locally?
@@ -21,14 +21,14 @@ First off, thank you for wanting to contribute. If you want to add to this site,
 Wow, that's very cool 🤩. Here's a easy way to make the site run on your own computer:
 
 * Fist, make sure you have git installed. [HOWTO](https://github.com/git-guides/install-git)
-* Then install node and yarn. (howto need work)
+* Then install [nodejs](https://nodejs.org/en)
 * Then we are finally ready to pull down and build this bloody thing:
 ```
 git clone https://github.com/fyksen/tresh.run.git
 cd tresh.run
-yarn install
-yarn dev
+npm ci
+npm run docs:dev
 ```
 
-* Now you should be able to visit the url [http://localhost:8080/](http://localhost:8080/) and see the site.
+* Now you should be able to visit the url [http://localhost:5173/](http://localhost:5173/) and see the site.
 * Changes you make while running the site will get updated automatically when you save.
