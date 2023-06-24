@@ -15,3 +15,6 @@ Most of SK Vidar´s current training principles are adaptations by Markus Harbo 
 ::: tip Read along to learn more!
 On the left side, you will find the comprehensive menu displaying various topics, while on the right side, there is a site map illustrating the current page's layout.
 :::
+
+# Knut er søt'
+Tom er kul.
